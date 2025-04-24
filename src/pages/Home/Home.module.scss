@@ -1,0 +1,47 @@
+.home {
+  padding: 20px 64px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #400d49;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 992px) {
+  .home {
+    padding: 32px 32px;
+  }
+  .title {
+    font-size: 28px;
+  }
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .home {
+    padding: 16px 16px;
+  }
+  .title {
+    font-size: 24px;
+  }
+}

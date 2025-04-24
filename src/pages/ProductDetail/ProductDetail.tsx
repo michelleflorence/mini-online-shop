@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import styles from "./ProductDetail.module.scss";
 import { useEffect, useState } from "react";
 import { productOne, productTwo } from "../../data/product";
@@ -36,7 +36,9 @@ const ProductDetail = () => {
   return (
     <div className={styles["container"]}>
       <div className={styles["back-button"]}>
-        <Button color="secondary">Kembali</Button>
+        <Link to="/">
+          <Button color="secondary">Back</Button>
+        </Link>
       </div>
       <img src={product.image} alt={product.name} />
       <div className={styles["info"]}>

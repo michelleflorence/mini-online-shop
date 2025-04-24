@@ -3,7 +3,7 @@
   max-width: 400px;
   height: 400px;
   display: block;
-  border-radius: 2rem;
+  border-radius: 32px;
   overflow: hidden;
   position: relative;
   text-decoration: none;
@@ -36,19 +36,19 @@
 
 .textBox {
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 24px;
   width: 100%;
   text-align: center;
   color: white;
 
   h3 {
-    font-size: 1.2rem;
+    font-size: 18px;
     font-weight: bold;
   }
 
   p {
-    margin-top: 0.25rem;
-    font-size: 1rem;
+    margin-top: 4px;
+    font-size: 16px;
     font-weight: 500;
   }
 }

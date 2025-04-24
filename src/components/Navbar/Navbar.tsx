@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
 
       <div className={styles["button-group"]}>
         <Button color="primary">Sign Up</Button>
-        <Button color="danger">Try it For Free</Button>
+        <Button color="danger">Login</Button>
       </div>
     </nav>
   );

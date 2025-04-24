@@ -22,39 +22,39 @@ img {
   width: 400px;
   height: 400px;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 24px;
 }
 
 .info {
   max-width: 400px;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  padding: 1rem;
+  gap: 16px;
+  padding: 16px;
   border-radius: 16px;
 }
 
 .info h2 {
-  font-size: 1.8rem;
+  font-size: 28px;
   color: #400d49;
   margin-bottom: 10px;
 }
 
 .info p {
-  font-size: 1rem;
+  font-size: 16px;
   color: #4f4f4f;
 }
 
 .info h3 {
-  font-size: 1.5rem;
+  font-size: 24px;
   color: #323232;
   margin-top: 10px;
 }
 
 .not-found {
   text-align: center;
-  padding: 2rem;
-  font-size: 1.3rem;
+  padding: 32px;
+  font-size: 20px;
   color: red;
 }
 

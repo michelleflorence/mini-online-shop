@@ -11,11 +11,6 @@ const Cart = () => {
     );
   }
 
-  const totalHarga = cart.reduce(
-    (acc, item) => acc + item.price * item.quantity,
-    0
-  );
-
   return (
     <div className={styles["cart-container"]}>
       <h2 className={styles["title"]}>Cart</h2>

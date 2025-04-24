@@ -1,4 +1,9 @@
 import petToys from "../assets/images/pet-toys.png";
+import petTreats from "../assets/images/pet-treats.png";
+import petShampoo from "../assets/images/pet-shampoo.png";
+import petBowl from "../assets/images/pet-bowl.png";
+import petLeash from "../assets/images/pet-leash.png";
+import petBrush from "../assets/images/pet-brush.png";
 
 export const productOne = [
   {
@@ -10,17 +15,17 @@ export const productOne = [
   },
   {
     id: 2,
-    name: "Dog Treats",
+    name: "Pet Treats",
     price: 25000,
-    image: petToys,
-    description: "Cemilan sehat untuk anjing kesayangan.",
+    image: petTreats,
+    description: "Cemilan sehat untuk peliharaan kesayangan!",
   },
   {
     id: 3,
     name: "Pet Shampoo",
     price: 30000,
-    image: petToys,
-    description: "Shampoo lembut untuk bulu hewan kesayanganmu.",
+    image: petShampoo,
+    description: "Shampoo lembut untuk bulu hewan kesayanganmu!",
   },
 ];
 
@@ -29,21 +34,21 @@ export const productTwo = [
     id: 4,
     name: "Pet Food Bowl",
     price: 20000,
-    image: petToys,
-    description: "Mangkok makanan tahan gores untuk pet.",
+    image: petBowl,
+    description: "Mangkok makanan tahan gores untuk peliharaan kesayanganmu!",
   },
   {
     id: 5,
     name: "Leash & Collar Set",
     price: 35000,
-    image: petToys,
-    description: "Tali dan kalung kuat untuk jalan-jalan.",
+    image: petLeash,
+    description: "Tali dan kalung kuat untuk jalan-jalan!",
   },
   {
     id: 6,
     name: "Grooming Brush",
     price: 22000,
-    image: petToys,
-    description: "Sisir lembut untuk merawat bulu hewan peliharaan.",
+    image: petBrush,
+    description: "Sisir lembut untuk merawat bulu hewan peliharaan!",
   },
 ];

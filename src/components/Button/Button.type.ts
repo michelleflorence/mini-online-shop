@@ -7,4 +7,5 @@ export interface ButtonProps
     | "danger"
     | "success"
     | "info"
+    | "secondary"
 }

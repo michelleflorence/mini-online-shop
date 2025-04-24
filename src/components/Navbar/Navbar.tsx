@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import styles from "./Navbar.module.scss";
 import logo from "../../assets/logo.png";
 import Button from "../Button/Button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ShoppingCart } from "lucide-react";
+import { useCart } from "../../provider/CartContext";
 
 const Navbar: React.FC = () => {
+  const { cart } = useCart();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -30,8 +32,19 @@ const Navbar: React.FC = () => {
           </Link>
         </li>
         <li>
-          <Link to="/cart" onClick={() => setIsOpen(false)}>
-            Cart
+          <Link
+            to="/cart"
+            onClick={() => setIsOpen(false)}
+            className={styles["cart-link"]}
+          >
+            <div className={styles["cart-icon"]}>
+              <ShoppingCart size={20} />
+              {cart.length > 0 && (
+                <span className={styles["cart-count"]}>
+                  {cart.reduce((sum, item) => sum + item.quantity, 0)}
+                </span>
+              )}
+            </div>
           </Link>
         </li>
       </ul>

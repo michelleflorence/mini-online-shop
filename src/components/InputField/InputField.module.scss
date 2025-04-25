@@ -38,7 +38,7 @@ input {
   color: #717276;
   background-color: #f5f7fb !important;
 
-   &:-webkit-autofill {
+  &:-webkit-autofill {
     background-color: #f5f7fb !important;
     box-shadow: 0 0 0px 1000px #f5f7fb inset;
     -webkit-text-fill-color: #000 !important; // opsional, biar teks-nya tetap kelihatan normal
@@ -48,6 +48,7 @@ input {
 .input-field input:focus {
   border: none;
   outline: none;
+  color: #000 !important;
 }
 
 .error {

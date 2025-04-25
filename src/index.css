@@ -5,7 +5,7 @@
   height: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to left, #4b81c4, #1a7bd4);
+  background-color: rgb(216, 216, 216);
   border-radius: 40px;
 }
 ::-webkit-scrollbar-track {

@@ -5,10 +5,13 @@ import logo from "../../assets/logo.png";
 import Button from "../Button/Button";
 import { Menu, X, ShoppingCart } from "lucide-react";
 import { useCart } from "../../provider/CartContext";
+import { useAuth } from "../../provider/AuthContext";
+import profilePicture from "../../assets/images/profile-picture.jpg"; // Placeholder for user profile picture
 
 const Navbar: React.FC = () => {
   const { cart } = useCart();
   const [isOpen, setIsOpen] = useState(false);
+  const { user, logout } = useAuth();
 
   return (
     <nav className={styles["navbar"]}>
@@ -48,10 +51,28 @@ const Navbar: React.FC = () => {
           </Link>
         </li>
       </ul>
-
+      {/* Display user profile and name if logged in */}
       <div className={styles["button-group"]}>
-        <Button color="primary">Sign Up</Button>
-        <Button color="danger">Login</Button>
+        {user ? (
+          <>
+            {/* Show user profile picture if available */}
+            <img
+              src={profilePicture}
+              alt="Profile"
+              className={styles["profile-picture"]}
+            />
+            {/* Show user profile and username */}
+            <span className={styles["username"]}>Hello, {user.username}!</span>
+            {/* Logout Button */}
+            <Button color="danger" onClick={logout}>
+              Logout
+            </Button>
+          </>
+        ) : (
+          <Link to="/login">
+            <Button>Login</Button>
+          </Link>
+        )}
       </div>
     </nav>
   );

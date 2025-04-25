@@ -6,11 +6,12 @@ const Button: React.FC<ButtonProps> = ({
   color = "primary",
   children,
   onClick,
+  type,
 }) => (
   <button
     className={`${styles["button"]} ${styles["color-" + color]}`}
-    type="button"
     onClick={onClick}
+    type={type}
   >
     {children}
   </button>

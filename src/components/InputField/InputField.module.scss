@@ -21,7 +21,7 @@ input {
   align-items: center;
   border-radius: 10px;
   padding: 12px 18px;
-  background-color: #f5f7fb;
+  background-color: #f5f7fb !important;
 
   &.error-border {
     border: 1px solid #ff3b30 !important;
@@ -36,7 +36,13 @@ input {
   font-style: normal;
   font-weight: 400;
   color: #717276;
-  background-color: #f5f7fb;
+  background-color: #f5f7fb !important;
+
+   &:-webkit-autofill {
+    background-color: #f5f7fb !important;
+    box-shadow: 0 0 0px 1000px #f5f7fb inset;
+    -webkit-text-fill-color: #000 !important; // opsional, biar teks-nya tetap kelihatan normal
+  }
 }
 
 .input-field input:focus {
@@ -48,10 +54,6 @@ input {
   font-size: 14px;
   color: #ff3b30;
   margin-top: 12px;
-}
-
-.input-container .error-border {
-  border: 1px solid #ff3b30 !important;
 }
 
 .icon-right {

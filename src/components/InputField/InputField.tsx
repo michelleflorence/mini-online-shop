@@ -27,13 +27,15 @@ const InputField: React.FC<InputFieldProps> = ({
   return (
     <div className={styles["input-field"]}>
       {label && <div className={styles["label"]}>{label}</div>}
-      <div className={styles["input-container"]}>
+      <div
+        className={`${styles["input-container"]} ${
+          error ? styles["error-border"] : ""
+        }`}
+      >
         <input
           type={showPassword ? "text" : type}
           name={name} // atau kamu bisa kasih prop name kalau mau lebih fleksibel
-          className={`${styles["input"]} ${
-            error ? styles["error-border"] : ""
-          }`}
+          className={`${styles["input"]}`}
           placeholder={placeholder}
           value={value}
           onChange={onChange}
@@ -47,8 +49,8 @@ const InputField: React.FC<InputFieldProps> = ({
             alt="icon-eye"
           />
         )}
-        {error && <div className={styles["error"]}>{error}</div>}
       </div>
+      {error && <div className={styles["error"]}>{error}</div>}
     </div>
   );
 };

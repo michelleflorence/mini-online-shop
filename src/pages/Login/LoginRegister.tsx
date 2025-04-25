@@ -94,6 +94,7 @@ const LoginRegister = () => {
               <InputField
                 label="Username"
                 type="text"
+                name="text"
                 placeholder="Enter your username"
                 value={values.username}
                 onChange={(e) => setFieldValue("username", e.target.value)}
